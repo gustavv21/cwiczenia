@@ -1,0 +1,14 @@
+<p id="petla"></p>
+
+<script>
+var text = ""
+
+for(var i = 1; i <11; i++){
+    if(i % 2 === 0){
+        text += "<p style='color:red'>" + i + "</p>";
+    } else {
+        text += i;
+    }
+}
+document.getElementById("petla").innerHTML = text;
+</script>

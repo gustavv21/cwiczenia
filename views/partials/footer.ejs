@@ -1,0 +1,88 @@
+      <footer class="footer fixed-bottom">
+          <div class="container">
+            <div class="content">
+              <div class="text-center">
+                <div style="letter-spacing: 5px;">
+                  <a href="#">
+                    <i class="fab fa-facebook-f fa-2x"> </i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-twitter fa-2x"> </i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-linkedin fa-2x"> </i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-instagram fa-2x"> </i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+      <hr>
+    
+        <div >
+          <p class="copyright text-center">© 2018 Copyright:
+            <a href="https://google.pl/"> Name Brand</a>
+          </p>
+        </div>
+      </footer>
+      
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="node_modules/easytimer.js/dist/easytimer.min.js"></script>
+
+<!--licznik na stronie  -->
+<script>
+    var timerInstance = new Timer();
+</script>
+<script>
+var timer = new Timer();
+timer.start();
+timer.addEventListener('secondsUpdated', function (e) {
+    $('#basicUsage').html(timer.getTimeValues().toString());
+});
+</script>
+
+<!--zmiana ikony na tekst w kwadracie-->
+<script>
+$(document).ready()
+{
+    $("#square").hover(
+        function() // on mouseover
+        {
+            $(this).removeClass("fab fa-asymmetrik fa-9x")
+            $(this).text("Zmiana ikony na tekst");
+        },
+        function() // on mouseout
+        {
+            $(this).addClass("fab fa-asymmetrik fa-9x");
+            $(this).text("");
+        });
+};
+</script>
+
+<!--zwijany sidebar-->
+<script>
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar-wrapper').toggleClass('active');
+    });
+</script>
+<script>
+    $( "#test" ).click(function() {
+        $( "#sidebar-wrapper.active" ).toggleClass();
+    });
+</script>
+
+<!--zmiana rozmiaru tekstu 0-->
+<script>
+$(window).on('load', function() {
+  $( "#tekst" ).animate({
+    fontSize: "500",
+  }, 2500 );
+});
+</script>
+
+    </body>
+</html>

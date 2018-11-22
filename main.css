@@ -1,0 +1,131 @@
+#wrapper{
+    padding-top: 50px;
+}
+#wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -500px;
+    overflow-y: auto;
+    background: #000;
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+@media {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+.footer{
+    background: #d2d2d2;
+    padding-top: 25px;
+    padding-bottom: 5px;
+    bottom: -100px;
+    position: absolute;
+    width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+}
+
+#sidebar-wrapper.active {
+    margin-left: -250px;
+}
+
+.fas.fa-times{
+    color: red;
+    margin: 7px 7px;
+}
+.row{
+    padding-bottom: 20px
+}
+#square {
+    height:150px;
+    position: relative;
+    width: 150px;
+    background-color:gray;
+}
+.sqtext {
+    position:absolute;
+    text-align: center
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    max-width: 100%;
+    height: -webkit-fill-available;
+    width: 100%;
+}
+
+.tekst{
+    color: green
+}
+
+#delete-form {
+    display: inline;
+}

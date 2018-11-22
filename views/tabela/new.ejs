@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center; margin-top: 80px">Formularz dodwania klienta</h1>
+        <div style="width: 30%; margin: 25px auto">
+            <form action="/tabela" method="POST">
+                <div class="form-group">
+                    <label>Imię:</label>
+                    <input class="form-control" type="text" name="imie" placeholder="Imię">
+                </div>
+                <div class="form-group">
+                    <label>Nazwisko:</label>
+                    <input class="form-control" type="text" name="nazwisko" placeholder="Nazwisko">
+                </div>
+                <div class="form-group">
+                    <label>Telefon:</label>
+                    <input class="form-control" type="number" name="telefon" placeholder="Telefon kontaktowy">
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input class="form-control" type="text" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Dodaj Klienta</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

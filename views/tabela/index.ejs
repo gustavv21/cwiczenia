@@ -1,0 +1,43 @@
+<% include ../partials/header %>
+
+<div class=container>
+    <h2 class="text-center" style="margin-top:50px">
+        <a class="btn btn-success btn-lg" href="/tabela/new">
+            Dodaj nowego klienta
+        </a>
+    </h2>
+    <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Imie</th>
+            <th>Nazwisko</th>
+            <th>Telefon</th>
+            <th>Email</th>
+            <th>Działanie</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% tabela.forEach(function(tabela){ %>
+            <tr>
+                <td><%= tabela.imie %></td>
+                <td><%= tabela.nazwisko %></td>
+                <td><%= tabela.telefon %></td>
+                <td><%= tabela.email %></td>
+                <td>
+                    <a class="btn btn-primary" href="/tabela/<%= tabela._id %>">
+                    Szczegóły
+                    </a>
+                    <a class="btn btn-warning" href="/tabela/<%= tabela._id %>/edit">
+                    Edytuj
+                    </a>
+                    <form id="delete-form" action="/tabela/<%= tabela._id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger">Usuń</button>
+                    </form>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+    </table>
+</div>
+
+<% include ../partials/footer %>
